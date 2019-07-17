@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:id="@+id/main_city"
+            style="@style/main_bold_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="City Name"
+            android:textSize="32sp"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            style="@style/normal_text_style"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text=""
+            android:textStyle="bold"
+            android:id="@+id/date"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3.5"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvTemp"
+                    style="@style/main_bold_text_style"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="end"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="50sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.100000024" />
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    style="@style/main_bold_text_style"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:text="o"
+                    android:textColor="@android:color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvTemp"
+                    app:layout_constraintStart_toEndOf="@+id/tvTemp"
+                    app:layout_constraintTop_toTopOf="@+id/tvTemp"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/tv_condition"
+                    style="@style/normal_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text=""
+                    android:textColor="@android:color/white"
+                    android:textSize="32sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="@+id/tvTemp"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTemp" />
+            </android.support.constraint.ConstraintLayout>
+
+
+            <ImageView
+                android:id="@+id/bigImage"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:src="@drawable/cloud"
+                android:layout_margin="15dp"
+                android:tint="#ffffff"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:background="@color/colorPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_thermo_small"/>
+
+
+                    <TextView
+                        android:id="@+id/temp1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        style="@style/normal_text_style"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="/"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        style="@style/normal_text_style"
+                        android:textColor="@android:color/white"/>
+
+                    <TextView
+                        android:id="@+id/temp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        style="@style/normal_text_style"
+                        android:textColor="@android:color/white"/>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:padding="5dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/rainsmall"/>
+
+
+                    <TextView
+                        android:id="@+id/rainPercentage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        style="@style/normal_text_style"
+                        android:textColor="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:text="%"
+                        android:textStyle="bold"
+                        android:layout_gravity="center"
+                        style="@style/normal_text_style"
+                        android:textColor="@android:color/white"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="@color/colorLightBlue">
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler_view">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+</LinearLayout>
